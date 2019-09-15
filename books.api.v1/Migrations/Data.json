@@ -1,0 +1,63 @@
+[
+  {
+    "title": "Albracas",
+    "description": "",
+    "authors": "Yellow Barkers, Mdal Csal",
+    "genre": "Fantasy",
+    "words": 540213,
+    "pages": 324,
+    "created": "2019-09-23T18:25:43.511Z",
+    "modified": "2019-09-23T18:25:43.511Z"
+  },
+  {
+    "title": "Snipers in the Night",
+    "description": "Where snipers go shooting in the nighttime.",
+    "authors": "Ral Foras, Elton Malvis",
+    "genre": "Fiction",
+    "words": 401234,
+    "pages": 287,
+    "created": "2019-09-23T18:25:43.511Z",
+    "modified": "2019-09-23T18:25:43.511Z"
+  },
+  {
+    "title": "Moon Flutters",
+    "description": "Where the mmon shadows become more than shadows.",
+    "authors": "Calton Reeds",
+    "genre": "Mystery",
+    "words": 203411,
+    "pages": 173,
+    "created": "2019-09-23T18:25:43.511Z",
+    "modified": "2019-09-23T18:25:43.511Z"
+  },
+
+  {
+    "title": "Gray Wolf Throne",
+    "description": "",
+    "authors": "Cinda Williams Chima",
+    "genre": "Fantasy",
+    "words": 623109,
+    "pages": 425,
+    "created": "2019-09-23T18:25:43.511Z",
+    "modified": "2019-09-23T18:25:43.511Z"
+  },
+  {
+    "title": "Snakes in the Pit",
+    "description": "",
+    "authors": "Clive Suldon",
+    "genre": "Western",
+    "words": 100213,
+    "pages": 131,
+    "created": "2019-09-23T18:25:43.511Z",
+    "modified": "2019-09-23T18:25:43.511Z"
+  },
+  {
+    "title": "Midnight at the Tower",
+    "description": "A tower that never has darkness, but suddenly that changes.",
+    "authors": "Sandy Brown",
+    "genre": "Science Fiction",
+    "words": 382710,
+    "pages": 294,
+    "created": "2019-09-23T18:25:43.511Z",
+    "modified": "2019-09-23T18:25:43.511Z"
+  }
+]
