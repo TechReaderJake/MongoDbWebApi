@@ -8,6 +8,10 @@ using System.Threading.Tasks;
 
 namespace books.api.Models
 {
+    /// <summary>
+    /// Book DTO object for the API to use.
+    /// </summary>
+    /// <example>var book = new Book();</example>
     public class Book : IEntity<string>
     {
         [BsonId]

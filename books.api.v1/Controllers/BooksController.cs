@@ -10,6 +10,11 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace books.api.Controllers
 {
+    /// <summary>
+    /// API controller for Books. Creates endpoints to send requests to
+    /// to get data from or set data into the database. 
+    /// Uses the UnitOfWork to decouple Book CRUD operations.
+    /// </summary>
     [Route("api/v1/[controller]")]
     //[Route("api/[controller]/[action]")]
     [ApiController]
@@ -58,12 +63,12 @@ namespace books.api.Controllers
             return NoContent();
         }
 
-        [HttpDelete(Name = "RemoveBook")]
-        public IActionResult DeleteBook(Book rbook)
-        {
-            _work.Books.Remove(rbook);
-            return NoContent();
-        }
+        //[HttpDelete(Name = "RemoveBook")]
+        //public IActionResult DeleteBook(Book rbook)
+        //{
+        //    _work.Books.Remove(rbook);
+        //    return NoContent();
+        //}
 
         [HttpDelete(Name = "RemoveBooks")]
         public IActionResult DeleteBooks(IEnumerable<Book> rbooks)

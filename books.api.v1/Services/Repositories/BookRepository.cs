@@ -8,11 +8,20 @@ using System.Threading.Tasks;
 
 namespace books.api.Services.Repositories
 {
+    /// <summary>
+    /// Implementation of the Book Repository and inheriting from the Generic Repository.
+    /// </summary>
     public class BookRepository : Repository<Book, string>, IBookRepository
     {
         private const string BookCollection = "Books";
         public BookRepository(AppDbContext context) : base(context, BookCollection)
         {
+            /* 
+             * If it is the first time creating the collection uncomment line below this block comment.
+             * This line below will eventually have an if the collection hasn't been created to create it and 
+             * seed the database with generic information. 
+            */
+
             //context.DB().CreateCollection(BookCollection);
         }
         public IEnumerable<Book> GetBooksWithDescriptions(int id)

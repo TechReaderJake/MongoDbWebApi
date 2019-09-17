@@ -1,4 +1,4 @@
-﻿using System;
+﻿ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -7,6 +7,10 @@ using books.api.Services.Repositories;
 
 namespace books.api.Services
 {
+    /// <summary>
+    /// Implementation of the IUnitOfWork to use the AppDbContext
+    /// and the Repositories created.
+    /// </summary>
     public class UnitOfWork : IUnitOfWork
     {
         public IBookRepository Books { get; private set; }
@@ -18,11 +22,13 @@ namespace books.api.Services
             Books = new BookRepository(_context);
         }
 
+        // Not Used Currently
         public int Complete()
         {
             throw new NotImplementedException();
         }
 
+        // Not Used Currently
         public void Dispose()
         {
             throw new NotImplementedException();

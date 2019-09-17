@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 
 namespace books.api.Services.Api
 {
+    /// <summary>
+    /// Not Currently Being Used.
+    /// </summary>
     [AttributeUsage(AttributeTargets.Method, AllowMultiple = true)]
     public class RequireParameterAttribute : ActionMethodSelectorAttribute
     {

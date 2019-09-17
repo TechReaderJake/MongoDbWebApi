@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 
 namespace books.api.Services.Api
 {
+    /// <summary>
+    /// Not Currently being used.
+    /// </summary>
     [AttributeUsage(AttributeTargets.Method, AllowMultiple = true)]
     public class ApiRequestConstraintAttribute : ActionMethodSelectorAttribute
     {

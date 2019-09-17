@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace books.api.Models
 {
+    /// <summary>
+    /// Database Context used for the API. Receives database settings interface.
+    /// </summary>
     public class AppDbContext
     {
         private readonly IMongoDatabase _db;

@@ -9,6 +9,11 @@ using System.Threading.Tasks;
 
 namespace books.api.Services.Repositories
 {
+    /// <summary>
+    /// Implementation of the Generic Repository to allow objects to extend the class for the CRUD operations.
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
+    /// <typeparam name="TPrimaryKey"></typeparam>
     public class Repository<T, TPrimaryKey> : IRepository<T, TPrimaryKey> where T : IEntity<TPrimaryKey>
     {
         protected readonly IMongoCollection<T> _context;

@@ -5,6 +5,9 @@ using System.Threading.Tasks;
 
 namespace books.api.Migrations
 {
+    /// <summary>
+    /// Will eventuallly be used to seed the database.
+    /// </summary>
     public class Migration
     {
     }
