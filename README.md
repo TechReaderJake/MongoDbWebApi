@@ -1,2 +1,2 @@
 # MongoDbWebApi
-A demonstration of MongoDB and the repository companion.
+A demonstration of MongoDB and the repository pattern.
