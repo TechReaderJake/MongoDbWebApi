@@ -11,6 +11,16 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Api", "Api", "{904A547A-5CD
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{EB8BEA12-A935-45AA-A99C-3409499A40A4}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Apps", "Apps", "{C3FBABD2-E7EB-4B53-9368-580F8F1DD92C}"
+EndProject
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "books.reactjs", "apps\books.reactjs\books.reactjs.njsproj", "{30FC1A5C-A1C0-4B7A-ABEA-2C4A9166D5BC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "books.vs.reactjs", "apps\books.vs.reactjs\books.vs.reactjs.csproj", "{7CA4CA80-C741-4B81-A995-8EC5C706CB9A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "books.vs.angularjs", "apps\books.vs.angularjs\books.vs.angularjs.csproj", "{369D4DC0-2F63-4011-9E71-FE3619F7E10F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "books.vs.razor", "apps\books.vs.razor\books.vs.razor.csproj", "{5EAAEC04-6844-4823-B480-3B5D92FB7B40}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +35,22 @@ Global
 		{04FFAD7C-9046-4E22-AE41-4593660C5F71}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{04FFAD7C-9046-4E22-AE41-4593660C5F71}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{04FFAD7C-9046-4E22-AE41-4593660C5F71}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30FC1A5C-A1C0-4B7A-ABEA-2C4A9166D5BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30FC1A5C-A1C0-4B7A-ABEA-2C4A9166D5BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30FC1A5C-A1C0-4B7A-ABEA-2C4A9166D5BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30FC1A5C-A1C0-4B7A-ABEA-2C4A9166D5BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7CA4CA80-C741-4B81-A995-8EC5C706CB9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CA4CA80-C741-4B81-A995-8EC5C706CB9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CA4CA80-C741-4B81-A995-8EC5C706CB9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CA4CA80-C741-4B81-A995-8EC5C706CB9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{369D4DC0-2F63-4011-9E71-FE3619F7E10F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{369D4DC0-2F63-4011-9E71-FE3619F7E10F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{369D4DC0-2F63-4011-9E71-FE3619F7E10F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{369D4DC0-2F63-4011-9E71-FE3619F7E10F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5EAAEC04-6844-4823-B480-3B5D92FB7B40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EAAEC04-6844-4823-B480-3B5D92FB7B40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EAAEC04-6844-4823-B480-3B5D92FB7B40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EAAEC04-6844-4823-B480-3B5D92FB7B40}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -32,6 +58,10 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{1DB158DE-C530-4738-9340-0BD8CF1416BC} = {EB8BEA12-A935-45AA-A99C-3409499A40A4}
 		{04FFAD7C-9046-4E22-AE41-4593660C5F71} = {904A547A-5CD1-4442-8682-A705F1652D6F}
+		{30FC1A5C-A1C0-4B7A-ABEA-2C4A9166D5BC} = {C3FBABD2-E7EB-4B53-9368-580F8F1DD92C}
+		{7CA4CA80-C741-4B81-A995-8EC5C706CB9A} = {C3FBABD2-E7EB-4B53-9368-580F8F1DD92C}
+		{369D4DC0-2F63-4011-9E71-FE3619F7E10F} = {C3FBABD2-E7EB-4B53-9368-580F8F1DD92C}
+		{5EAAEC04-6844-4823-B480-3B5D92FB7B40} = {C3FBABD2-E7EB-4B53-9368-580F8F1DD92C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1A42D8DC-9A41-4B43-B89E-55BAD5EB14C7}
