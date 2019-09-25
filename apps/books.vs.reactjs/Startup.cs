@@ -47,6 +47,12 @@ namespace books.vs.reactjs
             app.UseStaticFiles();
             app.UseSpaStaticFiles();
 
+            app.UseCors(builder => builder
+               .AllowAnyOrigin()
+               .AllowAnyMethod()
+               .AllowAnyHeader()
+               .AllowCredentials());
+
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
