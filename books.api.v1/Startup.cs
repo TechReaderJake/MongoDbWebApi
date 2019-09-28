@@ -41,9 +41,17 @@ namespace books.api
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                app.UseCors(
-                    options => options.WithOrigins("http://localhost:3000").AllowAnyMethod()
-                );
+                //app.UseCors(
+                //    options => options.WithOrigins("http://localhost:3000").AllowAnyMethod()
+                //);
+                //app.UseCors(
+                //    options => options.WithOrigins("https://localhost:44350/").AllowAnyMethod()
+                //);
+                app.UseCors(builder => builder
+                   .AllowAnyOrigin()
+                   .AllowAnyMethod()
+                   .AllowAnyHeader()
+                   .AllowCredentials());
             }
             else
             {

@@ -1,4 +1,6 @@
-﻿a.navbar-brand {
+﻿
+
+a.navbar-brand {
   white-space: normal;
   text-align: center;
   word-break: break-all;
@@ -17,4 +19,17 @@ html {
   box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
 }
 
+body {
+  background: #060606;
+  color: #ffffff;
+}
+.actions {
+  min-width: 200px;
+}
+table th {
+  color: #a0a0a0;
+}
+table td {
+  color: #ffffff;
+}
 
