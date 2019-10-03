@@ -28,6 +28,8 @@ namespace books.api.Services.Repositories
         void RemoveRange(IEnumerable<TEntity> entities);
         void Remove(string id);
         void RemoveRange(IEnumerable<string> id);
+
+        void Update(string id, TEntity entity);
     }
 
     /// <summary>

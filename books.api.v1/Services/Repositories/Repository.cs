@@ -80,5 +80,9 @@ namespace books.api.Services.Repositories
             }
         }
 
+        public void Update(string id, T entity)
+        {
+            _context.ReplaceOne(e => e.Id == id, entity);
+        }
     }
 }

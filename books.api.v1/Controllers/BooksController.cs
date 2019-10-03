@@ -60,6 +60,7 @@ namespace books.api.Controllers
         [HttpPut("{id:length(24)}")]
         public IActionResult Put(string id, [FromBody] Book book)
         {
+            _work.Books.Update(id, book);
             return NoContent();
         }
 

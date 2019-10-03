@@ -7,6 +7,7 @@ export const actionTypes = {
         "removeBook": "REMOVE_BOOK",
         "requestBook": "REQUEST_BOOK",
         "receiveBook": "RECEIVE_BOOK",
+        "updateBook": "UPDATE_BOOK"
     };
 
 export const api = {
@@ -14,7 +15,8 @@ export const api = {
     "postBooks": "https://localhost:44331/api/v1/books",
     "deleteBooks": "https://localhost:44331/api/v1/books",
 
-    "getBook": "https://localhost:44331/api/v1/books/",
     "postBook": "https://localhost:44331/api/v1/books",
-    "deleteBook": "https://localhost:44331/api/v1/books/"
+    "getBook": "https://localhost:44331/api/v1/books/",
+    "putBook": "https://localhost:44331/api/v1/books/",
+    "deleteBook": "https://localhost:44331/api/v1/books/",
 };
