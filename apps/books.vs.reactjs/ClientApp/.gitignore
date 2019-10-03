@@ -9,6 +9,10 @@
 # production
 /build
 
+# ignore the package lock to prevent security volunerabililties
+# on github
+package-lock.json
+
 # misc
 .DS_Store
 .env.local
