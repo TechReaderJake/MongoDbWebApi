@@ -1,38 +1,68 @@
 import React from 'react';
+import axios from 'axios';
+import { api } from '../Constants';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter,
          Form, FormGroup, Label, Input } from 'reactstrap';
 
 class AddBook extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
+    state = {
       modal: false,
-      nestedModal: false,
-      closeAll: false
+      book:
+        {
+          "title": "",
+          "description": "",
+          "authors": "",
+          "genre": "",
+          "words": 0,
+          "pages": 0,
+          "chapters": 0,
+          "created": "",
+          "modified": ""
+        }
     };
-
-    this.toggle = this.toggle.bind(this);
-    this.toggleNested = this.toggleNested.bind(this);
-    this.toggleAll = this.toggleAll.bind(this);
+    
+  handleChange = (event) =>
+  {
+    const datetime = new Date().toLocaleString();
+    const {name, value} = event.target;
+    this.setState(prevState => ({
+      book: {
+        ...prevState.book,
+        [name]: value,
+        created: datetime,
+        modified: datetime
+      }
+    }))
   }
 
-  toggle() {
+  toggle = () => {
     this.setState(prevState => ({
       modal: !prevState.modal
     }));
   }
 
-  toggleNested() {
-    this.setState({
-      nestedModal: !this.state.nestedModal,
-      closeAll: false
-    });
-  }
-
-  toggleAll() {
-    this.setState({
-      nestedModal: !this.state.nestedModal,
-      closeAll: true
+  addBook = () =>
+  {
+    var books = [];
+    books.push(this.state.book);
+    axios.post(api.postBooks, books).then((response) => {
+      this.setState(prevState => ({
+        modal: !prevState.modal
+      }));
+      this.state.book =
+      {
+        "title": "",
+        "description": "",
+        "authors": "",
+        "genre": "",
+        "words": 0,
+        "pages": 0,
+        "chapters": 0,
+        "created": "",
+        "modified": ""
+      };
+    }).catch(function (error) {
+      console.log(error);
     });
   }
 
@@ -45,31 +75,41 @@ class AddBook extends React.Component {
           <ModalHeader toggle={this.toggle}>Add Book</ModalHeader>
           <ModalBody>
           <Form>
-        <FormGroup>
-          <Label for="bookTitle">Title</Label>
-          <Input type="text" name="title" id="bookTitle" placeholder="Ralium Surfer" />
-        </FormGroup>
-        <FormGroup>
-          <Label for="bookAuthors">Authors</Label>
-          <Input type="text" name="authors" id="bookAuthors" placeholder="Jane Doe, Mike Doe" />
-        </FormGroup>      
-        <FormGroup>
-          <Label for="bookDescription">Description</Label>
-          <Input type="textarea" name="description" id="bookDescription" />
-        </FormGroup>
-      </Form>
-            {/* <Button color="success" onClick={this.toggleNested}>Show Nested Modal</Button>
-            <Modal isOpen={this.state.nestedModal} toggle={this.toggleNested} onClosed={this.state.closeAll ? this.toggle : undefined}>
-              <ModalHeader>Nested Modal title</ModalHeader>
-              <ModalBody>Stuff and things</ModalBody>
-              <ModalFooter>
-                <Button color="primary" onClick={this.toggleNested}>Done</Button>{' '}
-                <Button color="secondary" onClick={this.toggleAll}>All Done</Button>
-              </ModalFooter>
-            </Modal> */}
+            <FormGroup>
+              <Label for="bookTitle">Title</Label>
+              <Input 
+                type="text" 
+                name="title" 
+                onChange={this.handleChange}
+                value={this.state.book.title} />
+            </FormGroup>
+            <FormGroup>
+              <Label for="bookGenre">Genre</Label>
+              <Input type="text" 
+                name="genre" 
+                onChange={this.handleChange} 
+                value={this.state.book.genre} />
+            </FormGroup>
+            <FormGroup>
+              <Label for="bookAuthors">Authors</Label>
+              <Input 
+                type="text" 
+                name="authors" 
+                onChange={this.handleChange} 
+                value={this.state.book.authors} />
+            </FormGroup>      
+            <FormGroup>
+              <Label for="bookDescription">Description</Label>
+              <Input 
+                type="textarea" 
+                name="description" 
+                onChange={this.handleChange} 
+                value={this.state.book.description} />
+            </FormGroup>
+          </Form>
           </ModalBody>
           <ModalFooter>
-            <Button color="primary" onClick={this.toggle}>Save Book</Button>{' '}
+            <Button color="primary" onClick={this.addBook}>Save Book</Button>{' '}
             <Button color="secondary" onClick={this.toggle}>Cancel</Button>
           </ModalFooter>
           </div>

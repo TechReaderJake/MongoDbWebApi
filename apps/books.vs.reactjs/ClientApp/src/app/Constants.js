@@ -1,5 +1,4 @@
-const constants = [
-    actionTypes = {
+export const actionTypes = {
         "addBooks": "ADD_BOOKS",
         "removeBooks": "REMOVE_BOOKS",
         "requestBooks": "REQUEST_BOOKS",
@@ -8,16 +7,14 @@ const constants = [
         "removeBook": "REMOVE_BOOK",
         "requestBook": "REQUEST_BOOK",
         "receiveBook": "RECEIVE_BOOK",
-    },
-    api = {
-        "getBooks": "https://localhost:44331/api/v1/books",
-        "postBooks": "https://localhost:44331/api/v1/books",
-        "deleteBooks": "https://localhost:44331/api/v1/books",
+    };
 
-        "getBook": "https://localhost:44331/api/v1/books/",
-        "postBook": "https://localhost:44331/api/v1/books",
-        "deleteBook": "https://localhost:44331/api/v1/books/"
-    }
-];
+export const api = {
+    "getBooks": "https://localhost:44331/api/v1/books",
+    "postBooks": "https://localhost:44331/api/v1/books",
+    "deleteBooks": "https://localhost:44331/api/v1/books",
 
-export default constants;
+    "getBook": "https://localhost:44331/api/v1/books/",
+    "postBook": "https://localhost:44331/api/v1/books",
+    "deleteBook": "https://localhost:44331/api/v1/books/"
+};
